@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cupid’s Book of Fate | #MISSedMatch</title>
-<meta name="description" content="The #MISSedMatch open collab by @Moexran">
+<meta name="description" content="The #MISSedMatch open collab by @Mo
+exran">
 <meta name="theme-color" content="#b83a6b">
 <meta property="og:title" content="Cupid’s Book of Fate | #MISSedMatch">
 <meta property="og:description" content="Opposites attract, enemies to lovers and more. Meet the matches from the open collab.">
@@ -57,6 +58,10 @@ button{font:inherit;color:inherit;cursor:pointer}
 .moex-pair{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .moex-btn{flex:1 1 150px;max-width:270px;padding:11px 16px;border-radius:999px;border:2px solid var(--moex-pink);background:var(--moex-paper);color:var(--moex-rose);font-weight:800;text-decoration:none;text-align:center}
 .moex-btn:hover{background:var(--moex-pink);color:#fff}
+.moex-code{position:relative;margin:0 0 .8em}
+.moex-code pre{margin:0;padding:44px 16px 14px;background:var(--moex-bg);border:2px dashed var(--moex-line);border-radius:12px;overflow:auto;max-height:180px;font:.85rem/1.5 ui-monospace,Menlo,Consolas,monospace;color:var(--moex-ink);white-space:pre}
+.moex-copy{position:absolute;top:8px;right:8px;z-index:1;padding:5px 14px;border-radius:999px;border:2px solid var(--moex-pink);background:var(--moex-paper);color:var(--moex-rose);font:inherit;font-weight:800;font-size:.85rem;cursor:pointer}
+.moex-copy:hover{background:var(--moex-pink);color:#fff}
 
 /* categories */
 .moex-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:34px 0 12px}
@@ -72,6 +77,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .moex-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 @media(min-width:640px){.moex-grid{grid-template-columns:repeat(4,1fr);gap:16px}}
 @media(min-width:1000px){.moex-grid{grid-template-columns:repeat(6,1fr)}}
+/* scrollable matches area: height is set in JS to --moex-rows rows */
+.moex-grid{--moex-rows:3;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding:6px 6px 10px;margin:0 -6px;scrollbar-width:thin;scrollbar-color:var(--moex-pink) transparent;-webkit-overflow-scrolling:touch}
+.moex-grid::-webkit-scrollbar{width:8px}.moex-grid::-webkit-scrollbar-thumb{background:var(--moex-pink);border-radius:999px}.moex-grid::-webkit-scrollbar-track{background:transparent}
 .moex-card{position:relative;border-radius:18px;overflow:hidden;border:3px solid var(--moex-paper);box-shadow:var(--moex-shadow);aspect-ratio:3/4;background:var(--moex-blush);transition:transform .2s}
 .moex-card:hover{transform:translateY(-4px) rotate(-.6deg)}
 .moex-open{position:absolute;inset:0;width:100%;border:0;padding:0;background:none;text-align:left}
@@ -212,25 +220,38 @@ button{font:inherit;color:inherit;cursor:pointer}
 
   <section class="moex-box" id="moex-lore" aria-labelledby="moex-lore-h">
     <h2 id="moex-lore-h">The Lore</h2>
-    <p>One lazy afternoon in heaven, Moe the cupid was lounging around when she accidentally knocked over the Book of Fates. Papers everywhere! In her panic she shoved them back in any order, and the soulmates got scrambled. Whoops!</p>
-    <p>Now people who were never supposed to work together somehow… work? Enemies fall in love, grumpy meets sunshine, ghosts date humans, opposites attract.</p>
+    <p>One lazy afternoon in heaven, Moe the cupid was busy lounging around when she accidentally knocked over the Book of Fates. Papers were everywhere! And in her panic she shoved them back in any order... Accidentally scrambling the soulmates. Whoops!</p>
+    <p>Now people who were never supposed to cross paths are now inexplicably tied together. Enemies? Soulmates. Rivals? Lovers. Complete opposites? Well, let's see how that goes.</p>
+    <p><i>If fate says they shouldn't be together, that's probably exactly what we're looking for.</i></p>
     <p>The open collab is for Janitor AI creators who want to play with those scrambled pairings. Make a bot with an “opposites attract” trope where the couple was never meant to work, but did. Tag it <b>#MISSedMatch</b> and swipe through the matches below.</p>
-    <p>(Edit this box freely. When the text gets long, it scrolls instead of growing.)</p>
+    <p><i><b>Note:</b> Only bots with the tag, uses banner within the sourcecode + promotes in Velvet Hour can be featured on the site</i></p>
   </section>
 
   <section class="moex-box moex-gap" id="moex-join" aria-labelledby="moex-join-h">
-    <h2 id="moex-join-h">How to join?</h2>
+    <h2 id="moex-join-h">How do I join?</h2>
+    <p>No lorebook, no mandatory server, no complicated requirements! This is an <b>open collab</b>, and everyone is welcome to participate.</p>
+    <p>The main theme is <b>Opposite Attracts</b>.</p>
+    <p>Posting is open from <b>February 14th - August 14th 2027</b>.</p>
+    <p>All bots must use the tag <b>#MISSedMatch</b></p>
+    <p>Copy and paste the following into your bot profile's source code:</p>
+    <div class="moex-code">
+      <button class="moex-copy" type="button" id="moex-copy">Copy code</button>
+      <pre tabindex="0"><code id="moex-code-out"></code></pre>
+    </div>
+    <script type="text/plain" id="moex-snippet">
+<!-- paste your bot-profile code here, exactly as you want it copied -->
+    </script>
+    <p>Joining my server is entirely optional. HOWEVER, if you’d like your bot featured on the <b>Book of Fate site</b>, there’s a little extra step!</p>
     <ol>
-      <li>Make a Janitor AI bot where the pairing was never supposed to work: opposites attract, enemies to lovers, grumpy x sunshine, human x ghost, and more.</li>
-      <li>Add the tag <b>#MISSedMatch</b> to your bot.</li>
-      <li>Send me your bot link and a cover image so I can add it to the book.</li>
+      <li>Promote your bot in <b><a href="">Velvet Hour</a></b> <i>(18+ server owned by Moexran, KIKI.EXE, MalibuMurderess, and PrimaYvo)</i> and ping me!</li>
+      <li>Provide: <b> bot name, bot image, bot link, main trope/pairing dynamic, creator's profile, and a short description of the bot</b>.</li>
+      <li><i>Pinging me is important cus I might miss it-</i></li>
     </ol>
-    <p>(Edit these rules to match your collab.)</p>
     <a class="moex-btn" data-link="join" href="https://discord.gg/ttycJtNF3E" target="_blank" rel="noopener">Promote your bot in Velvet Hour (18+)</a>
   </section>
 
   <section class="moex-cta">
-    <a class="moex-big" data-link="tag" href="#" target="_blank" rel="noopener">#MISSedMatch</a>
+    <a class="moex-big" data-link="tag" href="https://janitorai.com/search?search=missedmatch" target="_blank" rel="noopener">#MISSedMatch</a>
     <div class="moex-pair">
       <a class="moex-btn" data-link="jai" href="https://janitorai.com/profiles/46d4fda8-565e-4384-bc2d-e5831a4397f7_profile-of-moexran" target="_blank" rel="noopener">My JAI profile</a>
       <a class="moex-btn" data-link="server" href="https://discord.gg/ttycJtNF3E" target="_blank" rel="noopener">My server (18+)</a>
@@ -332,13 +353,13 @@ button{font:inherit;color:inherit;cursor:pointer}
 /* === LINKS, IMAGES AND TEXT === */
 var MOEX_SETTINGS={
   banner:"",
-  pagedoll:"",
+  pagedoll:"https://file.garden/ad35P9foF0kAW7I8/Moehead",
   background:"",       /* page background image (light mode, or both) */
   backgroundDark:"",   /* optional different image for dark mode */
   backgroundVeil:0.55, /* 0 = image fully visible, 1 = hidden; raise it if text is hard to read */
   deadline:"2027-08-14", /* YYYY-MM-DD: shows a days-left strip under the banner (leave "" to hide) */
   ticker:["#MISSedMatch","Opposites attract","Enemies to lovers","Grumpy x Sunshine","Human x Ghost","Join the open collab"],
-  tag:"https://janitorai.com/search?q=%23MISSedMatch",
+  tag:"https://janitorai.com/search?search=missedmatch&page=1",
   jai:"https://janitorai.com/profiles/YOUR_PROFILE_ID",
   server:"https://discord.gg/ttycJtNF3E",
   web:"https://moexran.github.io/moexran/",
@@ -385,13 +406,21 @@ function match(b){
 function render(){
   var list=sorted(MOEX_BOTS.filter(match)),g=$("moex-grid");updateStats();
   $("moex-count").textContent=list.length+" of "+MOEX_BOTS.length+" matches";
-  if(!list.length){g.innerHTML='<p class="moex-empty">'+(cat==="fav"&&!favs.length?"No favorites yet. Tap the heart on a card to save it here.":"No matches found. Try another search or category.")+'</p>';return}
+  if(!list.length){g.innerHTML='<p class="moex-empty">'+(cat==="fav"&&!favs.length?"No favorites yet. Tap the heart on a card to save it here.":"No matches found. Try another search or category.")+'</p>';g.scrollTop=0;fitGrid();return}
   g.innerHTML=list.map(function(b){
     return '<article class="moex-card">'+(b.isNew?'<span class="moex-new">New</span>':'')+'<button class="moex-open" type="button" data-open="'+b.id+'" aria-label="Open '+esc(b.name)+'">'+imgHtml(b)+
     '<div class="moex-info"><h3>'+esc(b.name)+'</h3><span class="moex-age">'+esc(b.age)+' yrs</span><div class="moex-tags">'+b.tags.map(function(t){return '<span class="moex-tag">'+esc(t)+'</span>'}).join("")+'</div></div></button>'+
     '<button class="moex-heart" type="button" data-fav="'+b.id+'" aria-pressed="'+isFav(b.id)+'" aria-label="Favorite '+esc(b.name)+'">'+(isFav(b.id)?"♥":"♡")+'</button></article>';
   }).join("");
+  g.scrollTop=0;fitGrid();
 }
+function fitGrid(){
+  var g=$("moex-grid"),c=g.querySelector(".moex-card");
+  if(!c){g.style.maxHeight="";return}
+  var cs=getComputedStyle(g),rows=parseFloat(cs.getPropertyValue("--moex-rows"))||3,gap=parseFloat(cs.rowGap)||0;
+  g.style.maxHeight=Math.round(c.offsetHeight*rows+gap*(rows-1)+parseFloat(cs.paddingTop)+parseFloat(cs.paddingBottom))+"px";
+}
+window.addEventListener("resize",fitGrid);
 function renderCats(){
   $("moex-cats").innerHTML=CATS.map(function(c){return '<button class="moex-cat" type="button" data-cat="'+c[0]+'" aria-pressed="'+(cat===c[0])+'">'+c[1]+'</button>'}).join("");
 }
@@ -514,6 +543,25 @@ $("moex-sw-card").addEventListener("touchend",function(e){var d=e.changedTouches
   el.classList.add("moex-on")})();
 
 renderCats();render();
+
+(function(){
+  var src=document.getElementById("moex-snippet"),out=document.getElementById("moex-code-out"),btn=document.getElementById("moex-copy");
+  if(!src||!out||!btn)return;
+  var code=src.textContent.replace(/^\s*\n/,"").replace(/\s+$/,"");
+  out.textContent=code;
+  function done(ok){btn.textContent=ok?"Copied!":"Press Ctrl+C";setTimeout(function(){btn.textContent="Copy code"},1800)}
+  function fallback(){
+    var t=document.createElement("textarea");t.value=code;t.style.cssText="position:fixed;opacity:0";
+    document.body.appendChild(t);t.select();
+    var ok=false;try{ok=document.execCommand("copy")}catch(e){}
+    document.body.removeChild(t);done(ok);
+  }
+  btn.addEventListener("click",function(){
+    if(navigator.clipboard&&window.isSecureContext){
+      navigator.clipboard.writeText(code).then(function(){done(true)},fallback);
+    }else fallback();
+  });
+})();
 </script>
 </body>
 </html>
