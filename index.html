@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cupid’s Book of Fate | #MISSedMatch</title>
+<meta name="description" content="The #MISSedMatch open collab by @Moexran">
+<meta name="theme-color" content="#b83a6b">
+<meta property="og:title" content="Cupid’s Book of Fate | #MISSedMatch">
+<meta property="og:description" content="Opposites attract, enemies to lovers and more. Meet the matches from the open collab.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 90C8 60 4 32 23 19c12-8 24-1 27 9 3-10 15-17 27-9 19 13 15 41-27 71z' fill='%23e8588d' stroke='%238f2552' stroke-width='5' stroke-linejoin='round'/%3E%3Cpath d='M26 30c4-6 11-6 15-1' fill='none' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--moex-bg:#fff8fb;--moex-paper:#ffffff;--moex-blush:#ffd9e6;--moex-pink:#e8588d;--moex-rose:#b83a6b;--moex-ink:#241520;--moex-soft:#7a5a6b;--moex-line:#f1c3d4;--moex-shadow:0 8px 24px rgba(184,58,107,.15)}
+:root[data-theme="dark"]{--moex-bg:#150d14;--moex-paper:#231620;--moex-blush:#3a2030;--moex-pink:#ff7aa9;--moex-rose:#ffa3c4;--moex-ink:#fbeaf1;--moex-soft:#c9a3b5;--moex-line:#4a2c3d;--moex-shadow:0 8px 24px rgba(0,0,0,.5)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--moex-bg:#150d14;--moex-paper:#231620;--moex-blush:#3a2030;--moex-pink:#ff7aa9;--moex-rose:#ffa3c4;--moex-ink:#fbeaf1;--moex-soft:#c9a3b5;--moex-line:#4a2c3d;--moex-shadow:0 8px 24px rgba(0,0,0,.5)}}
+:root{--moex-hdbg:linear-gradient(135deg,#c2457a,#8f2552);--moex-hdtext:#fff4f8;--moex-hdsoft:#ffd9e6;--moex-hdline:#ffd9e6;--moex-tkbg:#ffd9e6;--moex-tktext:#8f2552}
+:root[data-theme="dark"]{--moex-hdbg:linear-gradient(135deg,#3d1a2e,#26121e);--moex-hdtext:#fbeaf1;--moex-hdsoft:#c9a3b5;--moex-hdline:#ff7aa9;--moex-tkbg:#3a2030;--moex-tktext:#ffa3c4}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--moex-hdbg:linear-gradient(135deg,#3d1a2e,#26121e);--moex-hdtext:#fbeaf1;--moex-hdsoft:#c9a3b5;--moex-hdline:#ff7aa9;--moex-tkbg:#3a2030;--moex-tktext:#ffa3c4}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--moex-bg);color:var(--moex-ink);font-family:"Nunito",system-ui,sans-serif;line-height:1.6;background-image:radial-gradient(var(--moex-line) 1.2px,transparent 1.2px);background-size:26px 26px}
+a{color:var(--moex-rose)}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--moex-pink);outline-offset:2px}
+.moex-wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* header */
+.moex-header{position:relative;overflow:hidden;background:var(--moex-hdbg);border-bottom:3px double var(--moex-hdline);padding:22px 0 0;text-align:center}
+.moex-header .moex-wrap{position:relative;z-index:1}
+.moex-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2rem,7vw,3.6rem);margin:0;color:var(--moex-hdtext);text-shadow:0 2px 0 rgba(0,0,0,.18);letter-spacing:.02em;line-height:1.1}
+.moex-tagline{margin:4px 0 14px;color:var(--moex-hdsoft);font-style:italic}
+.moex-search{display:flex;max-width:520px;margin:0 auto 14px;border:2px solid var(--moex-hdline);border-radius:999px;overflow:hidden;background:var(--moex-paper)}
+.moex-search input{flex:1;min-width:0;border:0;background:transparent;color:var(--moex-ink);padding:11px 18px;font:inherit}
+.moex-search input:focus{outline:none}
+.moex-search:focus-within{box-shadow:0 0 0 3px var(--moex-blush)}
+.moex-search span{padding:11px 16px;color:var(--moex-pink)}
+.moex-menu{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 18px;padding:8px 0 12px;border-top:1px solid rgba(255,255,255,.28)}
+.moex-menu a,.moex-menu button{background:none;border:0;text-decoration:none;color:var(--moex-hdtext);font-weight:800;padding:6px 8px}
+.moex-menu a:hover,.moex-menu button:hover{color:var(--moex-hdsoft);text-decoration:underline}
+
+/* banner + lore */
+.moex-banner{margin:20px 0;border:3px solid var(--moex-pink);border-radius:20px;overflow:hidden;box-shadow:var(--moex-shadow);aspect-ratio:3/1;min-height:110px;background:linear-gradient(135deg,var(--moex-blush),var(--moex-pink));display:grid;place-items:center;position:relative}
+.moex-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.moex-banner b{font-family:"Cormorant Garamond",serif;font-size:1.6rem;color:#fff;text-align:center;padding:8px}
+.moex-box{background:var(--moex-paper);border:2px solid var(--moex-line);border-radius:18px;padding:18px 20px;box-shadow:var(--moex-shadow);max-height:240px;overflow-y:auto}
+.moex-box h2{font-family:"Cormorant Garamond",serif;margin:0 0 8px;color:var(--moex-rose);font-size:1.8rem}
+.moex-box p{margin:0 0 .8em}
+
+/* buttons */
+.moex-cta{text-align:center;margin:24px 0 8px}
+.moex-big{display:block;width:100%;max-width:560px;margin:0 auto 12px;padding:18px;border-radius:999px;background:linear-gradient(135deg,var(--moex-pink),var(--moex-rose));color:#fff;font-family:"Cormorant Garamond",serif;font-weight:700;font-size:clamp(1.5rem,5vw,2.1rem);text-decoration:none;box-shadow:var(--moex-shadow);transition:transform .2s}
+.moex-big:hover{transform:scale(1.03)}
+.moex-pair{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.moex-btn{flex:1 1 150px;max-width:270px;padding:11px 16px;border-radius:999px;border:2px solid var(--moex-pink);background:var(--moex-paper);color:var(--moex-rose);font-weight:800;text-decoration:none;text-align:center}
+.moex-btn:hover{background:var(--moex-pink);color:#fff}
+
+/* categories */
+.moex-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:34px 0 12px}
+.moex-bar h2{font-family:"Cormorant Garamond",serif;font-size:2rem;margin:0;color:var(--moex-rose)}
+.moex-draw{background:var(--moex-ink);color:var(--moex-bg);border:0;border-radius:999px;padding:8px 16px;font-weight:800}
+.moex-draw:hover{background:var(--moex-pink);color:#fff}
+.moex-cats{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;scrollbar-width:thin}
+.moex-cat{flex:none;padding:7px 16px;border-radius:999px;border:2px solid var(--moex-line);background:var(--moex-paper);font-weight:800}
+.moex-cat[aria-pressed="true"]{background:var(--moex-pink);border-color:var(--moex-pink);color:#fff}
+.moex-count{color:var(--moex-soft);margin:0 0 12px;font-size:.9rem}
+
+/* cards */
+.moex-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:640px){.moex-grid{grid-template-columns:repeat(4,1fr);gap:16px}}
+@media(min-width:1000px){.moex-grid{grid-template-columns:repeat(6,1fr)}}
+.moex-card{position:relative;border-radius:18px;overflow:hidden;border:3px solid var(--moex-paper);box-shadow:var(--moex-shadow);aspect-ratio:3/4;background:var(--moex-blush);transition:transform .2s}
+.moex-card:hover{transform:translateY(-4px) rotate(-.6deg)}
+.moex-open{position:absolute;inset:0;width:100%;border:0;padding:0;background:none;text-align:left}
+.moex-open img{width:100%;height:100%;object-fit:cover;display:block}
+.moex-ph{width:100%;height:100%;display:grid;place-items:center;font-size:3rem;background:linear-gradient(160deg,var(--moex-blush),var(--moex-pink));color:#fff}
+.moex-info{position:absolute;left:0;right:0;bottom:0;padding:34px 10px 10px;background:linear-gradient(transparent,rgba(20,8,16,.88));color:#fff}
+.moex-info h3{margin:0;font-family:"Cormorant Garamond",serif;font-size:1.3rem;line-height:1.15}
+.moex-age{font-size:.8rem;font-weight:800;color:var(--moex-blush)}
+.moex-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}
+.moex-tag{font-size:.65rem;font-weight:800;padding:1px 8px;border-radius:999px;background:rgba(255,255,255,.22);backdrop-filter:blur(3px)}
+.moex-heart{position:absolute;top:8px;right:8px;z-index:2;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.9);color:var(--moex-pink);font-size:1.2rem;line-height:1;display:grid;place-items:center}
+.moex-heart[aria-pressed="true"]{background:var(--moex-pink);color:#fff}
+.moex-empty{grid-column:1/-1;text-align:center;padding:40px 10px;color:var(--moex-soft)}
+
+/* modal */
+.moex-modal{position:fixed;inset:0;z-index:50;background:rgba(20,8,16,.7);display:none;align-items:center;justify-content:center;padding:14px}
+.moex-modal.moex-on{display:flex}
+.moex-dialog{position:relative;display:flex;width:100%;max-width:700px;max-height:90vh;background:var(--moex-paper);border:3px solid var(--moex-pink);border-radius:22px;overflow:hidden;animation:moex-pop .22s ease-out}
+@keyframes moex-pop{from{transform:scale(.92);opacity:0}}
+.moex-mimg{flex:0 0 42%;background:var(--moex-blush)}
+.moex-mimg img,.moex-mimg .moex-ph{width:100%;height:100%;object-fit:cover}
+.moex-mbody{flex:1;min-width:0;padding:20px;overflow-y:auto}
+.moex-mbody h3{font-family:"Cormorant Garamond",serif;font-size:2rem;margin:0;line-height:1.1;color:var(--moex-rose)}
+.moex-mbody .moex-tag{background:var(--moex-blush);color:var(--moex-rose);font-size:.75rem;padding:2px 10px}
+.moex-by{margin:6px 0 10px;font-weight:700}
+.moex-desc{margin:12px 0 16px;max-height:170px;overflow-y:auto}
+.moex-x{position:absolute;top:8px;right:8px;z-index:3;width:34px;height:34px;border-radius:50%;border:0;background:var(--moex-ink);color:var(--moex-bg);font-size:1.1rem}
+.moex-mact{display:flex;gap:8px;flex-wrap:wrap}
+.moex-mact .moex-btn{flex:1 1 120px;font-size:.9rem}
+@media(max-width:520px){.moex-dialog{flex-direction:column}.moex-mimg{flex:0 0 36%}}
+
+/* afterword + footer */
+.moex-after{margin:40px 0 20px}
+.moex-after details{background:var(--moex-paper);border:2px solid var(--moex-pink);border-radius:18px;box-shadow:var(--moex-shadow)}
+.moex-after summary{cursor:pointer;padding:16px 20px;font-family:"Cormorant Garamond",serif;font-weight:700;font-size:1.5rem;color:var(--moex-rose)}
+.moex-after .moex-text{padding:0 20px 20px;max-height:300px;overflow-y:auto}
+.moex-footer{margin-top:30px;padding:24px 16px 100px;text-align:center;background:var(--moex-hdbg);color:var(--moex-hdtext);border-top:3px double var(--moex-hdline)}
+.moex-header :focus-visible,.moex-footer :focus-visible{outline-color:#fff}
+.moex-footer a{color:var(--moex-blush);margin:0 8px;font-weight:800}
+.moex-footer p{margin:0 0 8px}
+/* ticker, drifting hearts, back to top, swipe mode */
+.moex-ticker{overflow:hidden;background:var(--moex-tkbg);color:var(--moex-tktext);border-bottom:2px solid var(--moex-line)}
+.moex-track{display:flex;width:max-content;animation:moex-tick 30s linear infinite}
+.moex-track span{white-space:pre;padding:6px 0;font-weight:800;font-size:.85rem}
+@keyframes moex-tick{to{transform:translateX(-50%)}}
+.moex-drift{position:absolute;bottom:-24px;z-index:0;color:rgba(255,255,255,.3);pointer-events:none;animation:moex-rise linear infinite}
+@keyframes moex-rise{to{transform:translateY(-280px) rotate(25deg);opacity:0}}
+.moex-top{bottom:calc(76px + env(safe-area-inset-bottom,0px));width:44px;height:44px;font-size:1.1rem;display:none}
+.moex-top.moex-on{display:grid}
+.moex-bar button+button{margin-left:6px}
+.moex-swbox{position:relative;width:100%;max-width:340px;background:var(--moex-paper);border:3px solid var(--moex-pink);border-radius:22px;padding:14px;text-align:center;animation:moex-pop .22s ease-out}
+.moex-swcard{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;background:var(--moex-blush);touch-action:pan-y;transition:transform .25s,opacity .25s}
+.moex-swcard img,.moex-swcard .moex-ph{width:100%;height:100%;object-fit:cover;display:block}
+.moex-swcard.moex-l{transform:translateX(-120%) rotate(-12deg);opacity:0}
+.moex-swcard.moex-r{transform:translateX(120%) rotate(12deg);opacity:0}
+.moex-swend{padding:40px 12px;font-weight:700}
+.moex-swbtns{display:flex;justify-content:center;gap:18px;margin-top:12px}
+.moex-sbtn{width:56px;height:56px;padding:0;border-radius:50%;border:2px solid var(--moex-pink);background:var(--moex-paper);color:var(--moex-rose);font-size:1.5rem;font-weight:800}
+.moex-sbtn.moex-yes{background:var(--moex-pink);color:#fff}
+.moex-swhint{margin:8px 0 0;font-size:.8rem;color:var(--moex-soft)}
+.moex-deadline{display:none;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;text-align:center;margin:-8px 0 20px;padding:10px 16px;border-radius:18px;background:var(--moex-hdbg);color:var(--moex-hdtext);font-weight:800;box-shadow:var(--moex-shadow)}
+.moex-deadline.moex-on{display:flex}
+.moex-dnum{font-family:"Cormorant Garamond",serif;font-size:2.2rem;line-height:1}
+/* custom background image */
+.moex-bgimg,.moex-bgveil{display:none;position:fixed;inset:0;width:100%;height:100%;z-index:-1}
+.moex-bgimg{object-fit:cover}
+.moex-bgveil{background:var(--moex-bg);opacity:var(--moex-veilop,.55)}
+.moex-hasbg .moex-bgimg,.moex-hasbg .moex-bgveil{display:block}
+/* love calculator */
+.moex-lovebox{margin:26px 0 0;background:var(--moex-paper);border:2px dashed var(--moex-pink);border-radius:18px;padding:18px 20px;text-align:center;box-shadow:var(--moex-shadow)}
+.moex-lovebox h2{font-family:"Cormorant Garamond",serif;margin:0 0 4px;color:var(--moex-rose);font-size:1.8rem}
+.moex-lovebox p{margin:0}
+.moex-lrow{display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap;margin:14px 0 6px}
+.moex-lrow input{flex:1 1 150px;max-width:230px;min-width:0;padding:10px 16px;border-radius:999px;border:2px solid var(--moex-pink);background:var(--moex-bg);color:var(--moex-ink);font:inherit}
+.moex-lrow span{color:var(--moex-pink);font-size:1.3rem}
+.moex-pct{font-family:"Cormorant Garamond",serif;font-size:3.2rem;font-weight:700;color:var(--moex-rose);line-height:1.1}
+.moex-lres .moex-meter{max-width:380px;margin:0 auto}
+.moex-lres .moex-meter i{transition:width 1s ease-out}
+/* round theme button, pagedoll, toast, stats, controls */
+.moex-mode{position:fixed;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;width:50px;height:50px;padding:0;border-radius:50%;border:2px solid var(--moex-pink);background:var(--moex-paper);color:var(--moex-rose);font-size:1.4rem;box-shadow:var(--moex-shadow);display:grid;place-items:center}
+.moex-mode:hover{background:var(--moex-pink);color:#fff}
+.moex-doll{position:fixed;left:calc(10px + env(safe-area-inset-left,0px));top:calc(10px + env(safe-area-inset-top,0px));z-index:40;display:flex;flex-direction:column-reverse;align-items:flex-start;gap:6px;pointer-events:none}
+.moex-doll>*{pointer-events:auto}
+.moex-doll-wrap{position:relative}
+.moex-doll-btn{border:0;background:none;padding:0;animation:moex-float 3.4s ease-in-out infinite}
+.moex-doll-btn img{display:block;height:clamp(90px,18vw,180px);width:auto;max-width:30vw;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.3))}
+.moex-doll-ph{font-size:3.6rem}
+.moex-doll-x{position:absolute;top:0;left:0;width:18px;height:18px;border-radius:50%;border:0;background:var(--moex-ink);color:var(--moex-bg);font-size:.55rem;line-height:1;padding:0;display:grid;place-items:center}
+.moex-doll-x::after{content:"";position:absolute;inset:-8px}
+@keyframes moex-float{50%{transform:translateY(-8px)}}
+.moex-say{display:none;max-width:210px;background:var(--moex-paper);border:2px solid var(--moex-pink);border-radius:4px 16px 16px 16px;padding:8px 12px;font-size:.85rem;font-weight:700;box-shadow:var(--moex-shadow)}
+.moex-say.moex-on{display:block}
+.moex-toast{position:fixed;left:50%;top:16px;z-index:60;transform:translate(-50%,-90px);background:var(--moex-pink);color:#fff;font-weight:800;padding:10px 22px;border-radius:999px;box-shadow:var(--moex-shadow);transition:transform .3s;max-width:92vw;text-align:center}
+.moex-toast.moex-on{transform:translate(-50%,0)}
+.moex-gap{margin-top:16px}
+.moex-box ol{margin:0 0 .8em;padding-left:1.2em}
+.moex-stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0 0}
+.moex-stat{background:var(--moex-paper);border:2px dashed var(--moex-pink);border-radius:14px;padding:6px 18px;text-align:center;line-height:1.3;font-size:.85rem;color:var(--moex-soft)}
+.moex-stat b{font-family:"Cormorant Garamond",serif;font-size:1.7rem;color:var(--moex-rose)}
+.moex-ctl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px;font-weight:800;font-size:.9rem}
+.moex-ctl select{margin-left:4px;padding:6px 10px;border-radius:999px;border:2px solid var(--moex-line);background:var(--moex-paper);color:var(--moex-ink);font:inherit;max-width:60vw}
+.moex-new{position:absolute;top:10px;left:10px;z-index:2;background:var(--moex-pink);color:#fff;font-size:.7rem;font-weight:800;padding:2px 10px;border-radius:999px}
+.moex-meter{margin:12px 0 0;font-size:.85rem;font-weight:700}
+.moex-meter div{height:12px;border-radius:999px;background:var(--moex-blush);overflow:hidden;margin:4px 0}
+.moex-meter i{display:block;height:100%;background:linear-gradient(90deg,var(--moex-pink),var(--moex-rose))}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<img class="moex-bgimg" id="moex-bgimg" alt="" referrerpolicy="no-referrer">
+<div class="moex-bgveil" aria-hidden="true"></div>
+
+<header class="moex-header" id="moex-top">
+  <div class="moex-wrap">
+    <h1 class="moex-title">Cupid’s Book of Fate</h1>
+    <p class="moex-tagline">Matches nobody planned. Hearts that worked anyway.</p>
+    <div class="moex-search" role="search">
+      <input id="moex-q" type="search" placeholder="Search by bot, creator or trope" aria-label="Search bots">
+      <span aria-hidden="true">♡</span>
+    </div>
+    <nav class="moex-menu" aria-label="Menu">
+      <a href="#moex-lore">Lore</a>
+      <a href="#moex-join">Join</a>
+      <a href="#moex-love">Calculator</a>
+      <a href="#moex-bots">Bots</a>
+      <a href="#moex-after">Afterword</a>
+      <a href="#moex-bots" id="moex-favlink">♥ Saved (0)</a>
+    </nav>
+  </div>
+</header>
+
+<div class="moex-ticker" aria-hidden="true"><div class="moex-track" id="moex-track"></div></div>
+
+<main class="moex-wrap">
+  <div class="moex-banner" id="moex-banner"><b>#MISSedMatch</b></div>
+  <div class="moex-deadline" id="moex-deadline"></div>
+
+  <section class="moex-box" id="moex-lore" aria-labelledby="moex-lore-h">
+    <h2 id="moex-lore-h">The Lore</h2>
+    <p>One lazy afternoon in heaven, Moe the cupid was lounging around when she accidentally knocked over the Book of Fates. Papers everywhere! In her panic she shoved them back in any order, and the soulmates got scrambled. Whoops!</p>
+    <p>Now people who were never supposed to work together somehow… work? Enemies fall in love, grumpy meets sunshine, ghosts date humans, opposites attract.</p>
+    <p>The open collab is for Janitor AI creators who want to play with those scrambled pairings. Make a bot with an “opposites attract” trope where the couple was never meant to work, but did. Tag it <b>#MISSedMatch</b> and swipe through the matches below.</p>
+    <p>(Edit this box freely. When the text gets long, it scrolls instead of growing.)</p>
+  </section>
+
+  <section class="moex-box moex-gap" id="moex-join" aria-labelledby="moex-join-h">
+    <h2 id="moex-join-h">How to join?</h2>
+    <ol>
+      <li>Make a Janitor AI bot where the pairing was never supposed to work: opposites attract, enemies to lovers, grumpy x sunshine, human x ghost, and more.</li>
+      <li>Add the tag <b>#MISSedMatch</b> to your bot.</li>
+      <li>Send me your bot link and a cover image so I can add it to the book.</li>
+    </ol>
+    <p>(Edit these rules to match your collab.)</p>
+    <a class="moex-btn" data-link="join" href="https://discord.gg/ttycJtNF3E" target="_blank" rel="noopener">Promote your bot in Velvet Hour (18+)</a>
+  </section>
+
+  <section class="moex-cta">
+    <a class="moex-big" data-link="tag" href="#" target="_blank" rel="noopener">#MISSedMatch</a>
+    <div class="moex-pair">
+      <a class="moex-btn" data-link="jai" href="https://janitorai.com/profiles/46d4fda8-565e-4384-bc2d-e5831a4397f7_profile-of-moexran" target="_blank" rel="noopener">My JAI profile</a>
+      <a class="moex-btn" data-link="server" href="https://discord.gg/ttycJtNF3E" target="_blank" rel="noopener">My server (18+)</a>
+    </div>
+  </section>
+
+  <div class="moex-stats" id="moex-stats"></div>
+
+  <section class="moex-lovebox" id="moex-love" aria-labelledby="moex-love-h">
+    <h2 id="moex-love-h">Love calculator</h2>
+    <p>Ask the Book of Fate how well two names go together.</p>
+    <div class="moex-lrow">
+      <input id="moex-n1" type="text" maxlength="30" placeholder="Your name" aria-label="Your name">
+      <span aria-hidden="true">♥</span>
+      <input id="moex-n2" type="text" maxlength="30" placeholder="Their name" aria-label="Their name">
+      <button class="moex-draw" id="moex-calc" type="button">Calculate</button>
+    </div>
+    <div class="moex-lres" id="moex-lres" aria-live="polite"></div>
+  </section>
+
+  <section id="moex-bots" aria-labelledby="moex-bots-h">
+    <div class="moex-bar">
+      <h2 id="moex-bots-h">The Matches</h2>
+      <div><button class="moex-draw" id="moex-draw" type="button">♡ Draw a fate</button><button class="moex-draw" id="moex-swipe" type="button">♥ Swipe mode</button></div>
+    </div>
+    <div class="moex-cats" id="moex-cats" role="group" aria-label="Categories"></div>
+    <div class="moex-ctl">
+      <label>Trope <select id="moex-trope"></select></label>
+      <label>Sort <select id="moex-sort"><option value="added">Cupid’s order</option><option value="az">A to Z</option><option value="rand">Shuffle</option></select></label>
+    </div>
+    <p class="moex-count" id="moex-count" aria-live="polite"></p>
+    <div class="moex-grid" id="moex-grid"></div>
+  </section>
+
+  <section class="moex-after" id="moex-after">
+    <details>
+      <summary>Afterword:</summary>
+      <div class="moex-text">
+        <p>Thank you so much to everyone that joined this collab! I've wanted to do this for a year, and I'm glad that I'm finally able to do it! I hope all the creators had an amazing time creating their bots, and for the users to enjoy them hehe.</p>
+        <p>— Moe ♡</p>
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer class="moex-footer">
+  <p>Made with love by <b>@Moexran</b></p>
+  <p>
+    <a data-link="web" href="https://moexran.github.io/moexran/" target="_blank" rel="noopener">My webpage</a>
+    <a data-link="jai" href="https://janitorai.com/profiles/46d4fda8-565e-4384-bc2d-e5831a4397f7_profile-of-moexran" target="_blank" rel="noopener">JAI profile</a>
+    <a data-link="server" href="https://discord.gg/ttycJtNF3E" target="_blank" rel="noopener">Server (+18)</a>
+  </p>
+</footer>
+
+<div class="moex-modal" id="moex-sw" role="dialog" aria-modal="true" aria-label="Swipe mode">
+  <div class="moex-swbox">
+    <button class="moex-x" id="moex-sw-x" type="button" aria-label="Close swipe mode">✕</button>
+    <div id="moex-sw-card"></div>
+    <div class="moex-swbtns" id="moex-sw-btns">
+      <button class="moex-sbtn" id="moex-sw-no" type="button" aria-label="Pass">✕</button>
+      <button class="moex-sbtn" id="moex-sw-info" type="button" aria-label="See details">i</button>
+      <button class="moex-sbtn moex-yes" id="moex-sw-yes" type="button" aria-label="It’s a match">♥</button>
+    </div>
+    <p class="moex-swhint">Swipe the card or use the buttons</p>
+  </div>
+</div>
+
+<div class="moex-modal" id="moex-modal" role="dialog" aria-modal="true" aria-labelledby="moex-m-name">
+  <div class="moex-dialog">
+    <button class="moex-x" id="moex-close" type="button" aria-label="Close">✕</button>
+    <div class="moex-mimg" id="moex-m-img"></div>
+    <div class="moex-mbody">
+      <h3 id="moex-m-name"></h3>
+      <div class="moex-age" id="moex-m-age"></div>
+      <p class="moex-by" id="moex-m-by"></p>
+      <div class="moex-tags" id="moex-m-tags"></div>
+      <div class="moex-meter" id="moex-m-meter"></div>
+      <p class="moex-desc" id="moex-m-desc"></p>
+      <div class="moex-mact">
+        <a class="moex-btn" id="moex-m-link" target="_blank" rel="noopener">Chat on JAI</a>
+        <button class="moex-btn" id="moex-m-fav" type="button"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="moex-mode moex-top" id="moex-top-btn" type="button" aria-label="Back to top">↑</button>
+<button class="moex-mode" id="moex-theme" type="button" aria-label="Switch light or dark mode">☾</button>
+<div class="moex-toast" id="moex-toast" role="status"></div>
+<aside class="moex-doll" id="moex-doll" aria-label="Moe the cupid">
+  <div class="moex-say" id="moex-say" role="status"></div>
+  <div class="moex-doll-wrap">
+    <button class="moex-doll-btn" id="moex-doll-btn" type="button" aria-label="Talk to Moe"></button>
+    <button class="moex-doll-x" id="moex-doll-x" type="button" aria-label="Hide pagedoll">✕</button>
+  </div>
+</aside>
+
+<script>
+/* === LINKS, IMAGES AND TEXT === */
+var MOEX_SETTINGS={
+  banner:"",
+  pagedoll:"",
+  background:"",       /* page background image (light mode, or both) */
+  backgroundDark:"",   /* optional different image for dark mode */
+  backgroundVeil:0.55, /* 0 = image fully visible, 1 = hidden; raise it if text is hard to read */
+  deadline:"2027-08-14", /* YYYY-MM-DD: shows a days-left strip under the banner (leave "" to hide) */
+  ticker:["#MISSedMatch","Opposites attract","Enemies to lovers","Grumpy x Sunshine","Human x Ghost","Join the open collab"],
+  tag:"https://janitorai.com/search?q=%23MISSedMatch",
+  jai:"https://janitorai.com/profiles/YOUR_PROFILE_ID",
+  server:"https://discord.gg/ttycJtNF3E",
+  web:"https://moexran.github.io/moexran/",
+  join:"https://discord.gg/ttycJtNF3E",
+  dollLines:["Oops, I did it again. Meet your match!","Don’t blame me, the book fell on its own.","Tap a heart to save your favorite match.","Enemies today, soulmates tomorrow.","Psst, try Draw a fate."]
+};
+
+/* ===== ADD YOUR BOTS HERE =====
+   gender: "female" | "male"   pov: "any" | "fem" | "male"
+   img: direct image link (catbox, Filegarden, etc.) or ""  tags: exactly 3
+   trope: ONE trope per bot, used by the Trope filter (extra spaces and capitals do not matter)
+   fate: % the Book of Fate gave this pair (0-100)   isNew: true shows a "New" badge */
+var MOEX_BOTS=[
+ {id:"b1",trope:"Enemies to lovers",fate:5,isNew:true,name:"Example Bot A",age:24,gender:"male",pov:"fem",img:"",creator:"creator A",creatorUrl:"https://janitorai.com/",link:"https://janitorai.com/",tags:["Enemies to lovers","Rivals","Slow burn"],desc:"A short description of the bot goes here. Keep it to a few lines."},
+ {id:"b2",trope:"Grumpy x Sunshine",fate:12,isNew:true,name:"Example Bot B",age:27,gender:"female",pov:"male",img:"",creator:"creator B",creatorUrl:"https://janitorai.com/",link:"https://janitorai.com/",tags:["Grumpy x Sunshine","Fluff","Roommates"],desc:"A short description of the bot goes here."},
+ {id:"b3",trope:"Human x Ghost",fate:3,name:"Example Bot C",age:300,gender:"female",pov:"any",img:"",creator:"creator C",creatorUrl:"https://janitorai.com/",link:"https://janitorai.com/",tags:["Human x Ghost","Supernatural","Angst"],desc:"A short description of the bot goes here."},
+ {id:"b4",trope:"Opposites attract",fate:8,name:"Example Bot D",age:22,gender:"male",pov:"male",img:"",creator:"creator D",creatorUrl:"https://janitorai.com/",link:"https://janitorai.com/",tags:["Opposites attract","Rich x Poor","Romance"],desc:"A short description of the bot goes here."},
+ {id:"b5",trope:"Fake dating",fate:15,name:"Example Bot E",age:29,gender:"female",pov:"fem",img:"",creator:"creator E",creatorUrl:"https://janitorai.com/",link:"https://janitorai.com/",tags:["Fake dating","Comedy","Enemies to lovers"],desc:"A short description of the bot goes here."},
+ {id:"b6",trope:"Villain x Hero",fate:2,name:"Example Bot F",age:31,gender:"male",pov:"any",img:"",creator:"creator F",creatorUrl:"https://janitorai.com/",link:"https://janitorai.com/",tags:["Villain x Hero","Dark","Slow burn"],desc:"A short description of the bot goes here."}
+];
+
+var CATS=[["all","All"],["female","Female"],["male","Male"],["any","Anypov"],["fem","Fempov"],["malepov","Malepov"],["fav","Favorite ♥"]];
+var cat="all",query="",favs=[],lastFocus=null;
+var $=function(i){return document.getElementById(i)};
+try{favs=JSON.parse(localStorage.getItem("moex-favs")||"[]")}catch(e){favs=[]}
+function saveFavs(){try{localStorage.setItem("moex-favs",JSON.stringify(favs))}catch(e){}}
+function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
+function isFav(id){return favs.indexOf(id)>-1}
+function toggleFav(id){var i=favs.indexOf(id),b=find(id);if(i>-1)favs.splice(i,1);else{favs.push(id);toast("It’s a match! ♥ "+(b?b.name:""))}saveFavs();render()}
+var toastT;function toast(m){var t=$("moex-toast");t.textContent=m;t.classList.add("moex-on");clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove("moex-on")},2200)}
+window.moexPh=function(){var d=document.createElement("div");d.className="moex-ph";d.setAttribute("aria-hidden","true");d.textContent="♡";return d};
+function imgHtml(b){var u=String(b.img||"").trim();return u?'<img src="'+esc(u)+'" alt="'+esc(b.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(moexPh())">':'<div class="moex-ph" aria-hidden="true">♡</div>'}
+function match(b){
+  if(cat==="female"&&b.gender!=="female")return false;
+  if(cat==="male"&&b.gender!=="male")return false;
+  if(cat==="any"&&b.pov!=="any")return false;
+  if(cat==="fem"&&b.pov!=="fem")return false;
+  if(cat==="malepov"&&b.pov!=="male")return false;
+  if(cat==="fav"&&!isFav(b.id))return false;
+  if(trope&&norm(b.trope)!==trope)return false;
+  var t=norm(b.name+" "+b.creator+" "+b.trope+" "+b.tags.join(" "));
+  return t.indexOf(query)>-1;
+}
+function render(){
+  var list=sorted(MOEX_BOTS.filter(match)),g=$("moex-grid");updateStats();
+  $("moex-count").textContent=list.length+" of "+MOEX_BOTS.length+" matches";
+  if(!list.length){g.innerHTML='<p class="moex-empty">'+(cat==="fav"&&!favs.length?"No favorites yet. Tap the heart on a card to save it here.":"No matches found. Try another search or category.")+'</p>';return}
+  g.innerHTML=list.map(function(b){
+    return '<article class="moex-card">'+(b.isNew?'<span class="moex-new">New</span>':'')+'<button class="moex-open" type="button" data-open="'+b.id+'" aria-label="Open '+esc(b.name)+'">'+imgHtml(b)+
+    '<div class="moex-info"><h3>'+esc(b.name)+'</h3><span class="moex-age">'+esc(b.age)+' yrs</span><div class="moex-tags">'+b.tags.map(function(t){return '<span class="moex-tag">'+esc(t)+'</span>'}).join("")+'</div></div></button>'+
+    '<button class="moex-heart" type="button" data-fav="'+b.id+'" aria-pressed="'+isFav(b.id)+'" aria-label="Favorite '+esc(b.name)+'">'+(isFav(b.id)?"♥":"♡")+'</button></article>';
+  }).join("");
+}
+function renderCats(){
+  $("moex-cats").innerHTML=CATS.map(function(c){return '<button class="moex-cat" type="button" data-cat="'+c[0]+'" aria-pressed="'+(cat===c[0])+'">'+c[1]+'</button>'}).join("");
+}
+function find(id){return MOEX_BOTS.filter(function(b){return b.id===id})[0]}
+function openModal(id){
+  var b=find(id);if(!b)return;lastFocus=document.activeElement;
+  $("moex-m-img").innerHTML=imgHtml(b);
+  $("moex-m-name").textContent=b.name;
+  $("moex-m-age").textContent=b.age+" yrs";
+  $("moex-m-by").innerHTML='<a href="'+esc(b.creatorUrl)+'" target="_blank" rel="noopener">By: '+esc(b.creator)+'</a>';
+  $("moex-m-tags").innerHTML=b.tags.slice(0,3).map(function(t){return '<span class="moex-tag">'+esc(t)+'</span>'}).join("");
+  $("moex-m-desc").textContent=b.desc;
+  var f0=Math.max(0,Math.min(100,+b.fate||0));
+  $("moex-m-meter").innerHTML=b.fate==null?"":'The Book of Fate said: '+f0+'% compatible<div><i style="width:'+f0+'%"></i></div>Moe’s mistake says otherwise ♥';
+  $("moex-m-link").href=b.link;
+  var f=$("moex-m-fav");f.dataset.id=id;f.textContent=isFav(id)?"♥ Favorited":"♡ Favorite";
+  $("moex-modal").classList.add("moex-on");document.body.style.overflow="hidden";$("moex-close").focus();
+}
+function closeModal(){$("moex-modal").classList.remove("moex-on");if(!$("moex-sw").classList.contains("moex-on"))document.body.style.overflow="";if(lastFocus)lastFocus.focus()}
+
+$("moex-grid").addEventListener("click",function(e){
+  var h=e.target.closest("[data-fav]");if(h){toggleFav(h.dataset.fav);return}
+  var o=e.target.closest("[data-open]");if(o)openModal(o.dataset.open);
+});
+$("moex-cats").addEventListener("click",function(e){var c=e.target.closest("[data-cat]");if(!c)return;cat=c.dataset.cat;renderCats();render()});
+$("moex-q").addEventListener("input",function(e){query=norm(e.target.value);render()});
+$("moex-draw").addEventListener("click",function(){var b=MOEX_BOTS[Math.floor(Math.random()*MOEX_BOTS.length)];if(b)openModal(b.id)});
+$("moex-close").addEventListener("click",closeModal);
+$("moex-modal").addEventListener("click",function(e){if(e.target===this)closeModal()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){if($("moex-modal").classList.contains("moex-on"))closeModal();else swClose()}});
+$("moex-m-fav").addEventListener("click",function(){var id=this.dataset.id;toggleFav(id);this.textContent=isFav(id)?"♥ Favorited":"♡ Favorite"});
+
+/* theme */
+function applyBg(){var d=document.documentElement,dk=d.getAttribute("data-theme")==="dark",u=String((dk&&MOEX_SETTINGS.backgroundDark)||MOEX_SETTINGS.background||"").trim(),v=parseFloat(MOEX_SETTINGS.backgroundVeil);
+  if(!u){d.classList.remove("moex-hasbg");return}
+  d.style.setProperty("--moex-veilop",isNaN(v)?.55:Math.max(0,Math.min(1,v)));
+  var i=$("moex-bgimg");i.onerror=function(){d.classList.remove("moex-hasbg")};if(i.getAttribute("src")!==u)i.src=u;d.classList.add("moex-hasbg")}
+function setTheme(t){document.documentElement.setAttribute("data-theme",t);applyBg();$("moex-theme").textContent=t==="dark"?"☀":"☾";try{localStorage.setItem("moex-theme",t)}catch(e){}}
+(function(){var t=null;try{t=localStorage.getItem("moex-theme")}catch(e){}
+  if(!t)t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";setTheme(t)})();
+$("moex-theme").addEventListener("click",function(){setTheme(document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark")});
+
+var trope="",order=[],sayT;
+function sorted(l){var m=$("moex-sort").value;
+  if(m==="az")return l.slice().sort(function(a,b){return a.name.localeCompare(b.name)});
+  if(m==="rand")return l.slice().sort(function(a,b){return order.indexOf(a.id)-order.indexOf(b.id)});
+  return l}
+function stat(n,l){return '<div class="moex-stat"><b>'+n+'</b><br>'+l+'</div>'}
+function updateStats(){var c={};MOEX_BOTS.forEach(function(b){c[norm(b.creator)]=1});
+  $("moex-stats").innerHTML=stat(MOEX_BOTS.length,"bots")+stat(Object.keys(c).length,"creators")+stat(favs.length,"your matches");
+  $("moex-favlink").textContent="♥ Saved ("+favs.length+")"}
+var tg={};MOEX_BOTS.forEach(function(b){var k=norm(b.trope);if(k&&!tg[k])tg[k]=String(b.trope).replace(/\s+/g," ").trim()});
+$("moex-trope").innerHTML='<option value="">All tropes</option>'+Object.keys(tg).sort().map(function(k){return '<option value="'+esc(k)+'">'+esc(tg[k])+'</option>'}).join("");
+$("moex-trope").addEventListener("change",function(){trope=this.value;render()});
+$("moex-sort").addEventListener("change",function(){order=MOEX_BOTS.map(function(b){return b.id}).sort(function(){return Math.random()-.5});render()});
+$("moex-favlink").addEventListener("click",function(){cat="fav";renderCats();render()});
+
+/* links and images from settings */
+document.querySelectorAll("[data-link]").forEach(function(a){var u=MOEX_SETTINGS[a.dataset.link];if(u)a.href=u});
+function setImg(u,alt,onFail){var i=new Image();i.alt=alt;i.referrerPolicy="no-referrer";i.onerror=onFail;i.src=u;return i}
+if(String(MOEX_SETTINGS.banner||"").trim()){var bi=setImg(MOEX_SETTINGS.banner.trim(),"#MISSedMatch open collab banner",function(){bi.remove()});$("moex-banner").appendChild(bi)}
+
+/* pagedoll */
+function dollPh(){$("moex-doll-btn").innerHTML='<span class="moex-doll-ph" aria-hidden="true">💘</span>'}
+if(String(MOEX_SETTINGS.pagedoll||"").trim()){var di=setImg(MOEX_SETTINGS.pagedoll.trim(),"Moe the cupid pagedoll",dollPh);$("moex-doll-btn").appendChild(di)}else dollPh();
+function say(t){var s=$("moex-say");s.textContent=t;s.classList.add("moex-on");clearTimeout(sayT);sayT=setTimeout(function(){s.classList.remove("moex-on")},4500)}
+$("moex-doll-btn").addEventListener("click",function(){var l=MOEX_SETTINGS.dollLines;if(l&&l.length)say(l[Math.floor(Math.random()*l.length)])});
+$("moex-doll-x").addEventListener("click",function(){$("moex-doll").style.display="none"});
+setTimeout(function(){var l=MOEX_SETTINGS.dollLines;if(l&&l.length)say(l[0])},1200);
+
+function norm(s){return String(s==null?"":s).replace(/\s+/g," ").trim().toLowerCase()}
+
+/* love calculator: same pair of names always gives the same result, in any order */
+function hash(str){var h=0;for(var i=0;i<str.length;i++)h=(h*31+str.charCodeAt(i))>>>0;return h}
+function calcLove(){
+  var a=String($("moex-n1").value).replace(/\s+/g," ").trim(),b=String($("moex-n2").value).replace(/\s+/g," ").trim(),r=$("moex-lres");
+  if(!a||!b){r.innerHTML='<p>Type both names first.</p>';return}
+  var key=[norm(a),norm(b)].sort().join("|"),sp=key==="angel|vladimir",p=sp?100:hash(key)%101,
+  msg=sp?"Written in the Book of Fate in ink. Moe didn’t have to scramble a thing!":p<25?"The Book of Fate rolled its eyes. Perfect, that’s basically enemies to lovers!":p<50?"A rocky start. But opposites attract, remember?":p<75?"Cupid approves. A little scrambled, very sweet.":p<90?"Sparks everywhere! Moe didn’t even have to knock anything over.":"Soulmates! Even the Book of Fate agrees.";
+  r.innerHTML='<p><b>'+esc(a)+' ♥ '+esc(b)+'</b></p><div class="moex-pct">'+p+'%</div><div class="moex-meter"><div><i style="width:0"></i></div></div><p>'+msg+'</p>';
+  setTimeout(function(){var i=r.querySelector("i");if(i)i.style.width=p+"%"},30);
+}
+$("moex-calc").addEventListener("click",calcLove);
+["moex-n1","moex-n2"].forEach(function(id){$(id).addEventListener("keydown",function(e){if(e.key==="Enter")calcLove()})});
+
+/* ticker */
+(function(){var it=MOEX_SETTINGS.ticker||[],t=$("moex-track");if(!it.length){t.parentNode.style.display="none";return}
+  var h="<span>"+it.map(esc).join("  ♥  ")+"  ♥  </span>";t.innerHTML=h+h})();
+/* drifting hearts in the header */
+(function(){var h=document.querySelector(".moex-header");for(var i=0;i<10;i++){var e=document.createElement("span");e.className="moex-drift";e.setAttribute("aria-hidden","true");e.textContent="♥";
+  e.style.cssText="left:"+(Math.random()*96).toFixed(1)+"%;font-size:"+(12+Math.random()*16).toFixed(0)+"px;animation-duration:"+(7+Math.random()*7).toFixed(1)+"s;animation-delay:-"+(Math.random()*10).toFixed(1)+"s";h.appendChild(e)}})();
+/* back to top */
+window.addEventListener("scroll",function(){$("moex-top-btn").classList.toggle("moex-on",window.scrollY>500)},{passive:true});
+$("moex-top-btn").addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
+
+/* swipe mode: goes through the bots that match the current filters */
+var deck=[],dpos=0,swx=0;
+function swShow(){var c=$("moex-sw-card"),b=find(deck[dpos]);
+  if(!b){c.className="";c.innerHTML='<p class="moex-swend">That’s everyone! You have '+favs.length+' saved match'+(favs.length===1?"":"es")+'.</p>';$("moex-sw-btns").style.display="none";return}
+  $("moex-sw-btns").style.display="";c.className="moex-swcard";
+  c.innerHTML=imgHtml(b)+'<div class="moex-info"><h3>'+esc(b.name)+'</h3><span class="moex-age">'+esc(b.age)+' yrs'+(b.trope?' · '+esc(b.trope):'')+'</span><div class="moex-tags">'+b.tags.map(function(t){return '<span class="moex-tag">'+esc(t)+'</span>'}).join("")+'</div></div>'}
+function swNext(dir){var c=$("moex-sw-card");if(!find(deck[dpos]))return;if(dir>0&&!isFav(deck[dpos]))toggleFav(deck[dpos]);c.classList.add(dir>0?"moex-r":"moex-l");setTimeout(function(){dpos++;swShow()},240)}
+$("moex-swipe").addEventListener("click",function(){deck=sorted(MOEX_BOTS.filter(match)).map(function(b){return b.id});
+  if(!deck.length){toast("No bots in this filter yet");return}
+  dpos=0;swShow();$("moex-sw").classList.add("moex-on");document.body.style.overflow="hidden";$("moex-sw-x").focus()});
+function swClose(){$("moex-sw").classList.remove("moex-on");document.body.style.overflow=""}
+$("moex-sw-x").addEventListener("click",swClose);
+$("moex-sw").addEventListener("click",function(e){if(e.target===this)swClose()});
+$("moex-sw-no").addEventListener("click",function(){swNext(-1)});
+$("moex-sw-yes").addEventListener("click",function(){swNext(1)});
+$("moex-sw-info").addEventListener("click",function(){if(find(deck[dpos]))openModal(deck[dpos])});
+$("moex-sw-card").addEventListener("touchstart",function(e){swx=e.touches[0].clientX},{passive:true});
+$("moex-sw-card").addEventListener("touchend",function(e){var d=e.changedTouches[0].clientX-swx;if(d>60)swNext(1);else if(d<-60)swNext(-1)},{passive:true});
+
+/* deadline strip */
+(function(){var el=$("moex-deadline"),dl=MOEX_SETTINGS.deadline?new Date(MOEX_SETTINGS.deadline+"T23:59:59"):null;
+  if(!dl||isNaN(dl))return;
+  var dd=Math.ceil((dl-new Date())/864e5),dt=dl.toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"});
+  el.innerHTML=dd>0?'<span class="moex-dnum">'+dd+'</span><span>'+(dd===1?"day":"days")+' left to join · ends '+dt+'</span>':'<span>The collab is closed. Thank you to everyone who joined!</span>';
+  el.classList.add("moex-on")})();
+
+renderCats();render();
+</script>
+</body>
+</html>
