@@ -94,6 +94,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .moex-heart[aria-pressed="true"]{background:var(--moex-pink);color:#fff}
 .moex-empty{grid-column:1/-1;text-align:center;padding:40px 10px;color:var(--moex-soft)}
 
+/* mobile: no nested scroller, the page itself scrolls so touch never gets trapped */
+@media(max-width:639px){.moex-grid{max-height:none!important;overflow:visible;overscroll-behavior:auto;padding:6px;margin:0}}
+
 /* modal */
 .moex-modal{position:fixed;inset:0;z-index:50;background:rgba(20,8,16,.7);display:none;align-items:center;justify-content:center;padding:14px}
 .moex-modal.moex-on{display:flex}
@@ -109,7 +112,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 .moex-x{position:absolute;top:8px;right:8px;z-index:3;width:34px;height:34px;border-radius:50%;border:0;background:var(--moex-ink);color:var(--moex-bg);font-size:1.1rem}
 .moex-mact{display:flex;gap:8px;flex-wrap:wrap}
 .moex-mact .moex-btn{flex:1 1 120px;font-size:.9rem}
-@media(max-width:520px){.moex-dialog{flex-direction:column}.moex-mimg{flex:0 0 36%}}
+.moex-mbody h3{padding-right:30px}
+@media(max-width:520px){.moex-dialog{flex-direction:row;max-height:88vh}.moex-mimg{flex:0 0 38%}.moex-mbody{padding:14px 12px}.moex-mbody h3{font-size:1.5rem}.moex-by{font-size:.85rem}.moex-desc{font-size:.85rem;max-height:none;overflow:visible;margin:10px 0 12px}.moex-mact .moex-btn{flex:1 1 100%;max-width:none;font-size:.85rem;padding:9px 12px}}
 
 /* afterword + footer */
 .moex-after{margin:40px 0 20px}
@@ -130,6 +134,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .moex-top{bottom:calc(76px + env(safe-area-inset-bottom,0px));width:44px;height:44px;font-size:1.1rem;display:none}
 .moex-top.moex-on{display:grid}
 .moex-bar button+button{margin-left:6px}
+.moex-note{margin:6px 0 0;font-size:.75rem;line-height:1.3;color:#8a8a8a;text-align:center}
 .moex-swbox{position:relative;width:100%;max-width:340px;background:var(--moex-paper);border:3px solid var(--moex-pink);border-radius:22px;padding:14px;text-align:center;animation:moex-pop .22s ease-out}
 .moex-swcard{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;background:var(--moex-blush);touch-action:pan-y;transition:transform .25s,opacity .25s}
 .moex-swcard img,.moex-swcard .moex-ph{width:100%;height:100%;object-fit:cover;display:block}
@@ -247,7 +252,7 @@ button{font:inherit;color:inherit;cursor:pointer}
       <li>Provide: <b> bot name, bot image, bot link, main trope/pairing dynamic, creator's profile, and a short description of the bot</b>.</li>
       <li><i>Pinging me is important cus I might miss it-</i></li>
     </ol>
-    <a class="moex-btn" data-link="join" href="https://discord.gg/ttycJtNF3E" target="_blank" rel="noopener">Promote your bot in Velvet Hour (18+)</a>
+    <a class="moex-btn" data-link="join" href="https://discord.gg/ttycJtNF3E" target="_blank" rel="noopener">Promote in Velvet Hour (18+)</a>
   </section>
 
   <section class="moex-cta">
@@ -275,7 +280,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   <section id="moex-bots" aria-labelledby="moex-bots-h">
     <div class="moex-bar">
       <h2 id="moex-bots-h">The Matches</h2>
-      <div><button class="moex-draw" id="moex-draw" type="button">♡ Draw a fate</button><button class="moex-draw" id="moex-swipe" type="button">♥ Swipe mode</button></div>
+      <div><button class="moex-draw" id="moex-draw" type="button">♡ Draw a fate</button><button class="moex-draw" id="moex-swipe" type="button">♥ Swipe mode</button><p class="moex-note">(!) Try the swipe mode for dating app experience!</p></div>
     </div>
     <div class="moex-cats" id="moex-cats" role="group" aria-label="Categories"></div>
     <div class="moex-ctl">
