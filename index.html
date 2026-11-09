@@ -51,8 +51,24 @@ button{font:inherit;color:inherit;cursor:pointer}
 .moex-box h2{font-family:"Cormorant Garamond",serif;margin:0 0 8px;color:var(--moex-rose);font-size:1.8rem}
 .moex-box p{margin:0 0 .8em}
 .moex-sect{font-family:"Cormorant Garamond",serif;font-size:2rem;margin:0 0 10px;color:var(--moex-rose);line-height:1.2}
-#moex-join{margin-top:30px}
 #moex-join .moex-box{max-height:360px}
+/* dropdowns (lore / opposites attract / how to join) */
+.moex-dropsect{margin:0 0 14px}
+.moex-drop{background:var(--moex-paper);border:2px solid var(--moex-line);border-radius:18px;box-shadow:var(--moex-shadow);overflow:hidden;transition:border-color .2s}
+.moex-drop[open]{border-color:var(--moex-pink)}
+.moex-drop summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px 12px 20px;cursor:pointer;list-style:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.moex-drop summary::-webkit-details-marker{display:none}
+.moex-drop summary::marker{content:""}
+.moex-drop summary:focus-visible{outline-offset:-5px}
+.moex-drop .moex-sect{margin:0;transition:color .2s}
+.moex-drop summary:hover .moex-sect{color:var(--moex-pink)}
+/* heart arrow: tip points right when closed, down when open */
+.moex-chev{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--moex-blush);color:var(--moex-pink);font-size:1.2rem;line-height:1;transform:rotate(-90deg);transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .2s,color .2s}
+.moex-drop summary:hover .moex-chev{background:var(--moex-pink);color:#fff}
+.moex-drop[open] .moex-chev{transform:rotate(0);background:var(--moex-pink);color:#fff}
+.moex-drop .moex-box{border:0;border-top:2px dashed var(--moex-line);border-radius:0;box-shadow:none;animation:moex-drop .25s ease-out}
+@keyframes moex-drop{from{opacity:0;transform:translateY(-6px)}}
+.moex-box li{margin:0 0 .35em}
 .moex-quick{margin:0 0 22px}
 .moex-fill{background:var(--moex-pink);color:#fff}
 .moex-fill:hover{background:var(--moex-rose)}
@@ -216,6 +232,7 @@ button{font:inherit;color:inherit;cursor:pointer}
     </div>
     <nav class="moex-menu" aria-label="Menu">
       <a href="#moex-lore">Lore</a>
+      <a href="#moex-opposites">Opposites</a>
       <a href="#moex-join">Join</a>
       <a href="#moex-love">Calculator</a>
       <a href="#moex-bots">Bots</a>
@@ -235,8 +252,12 @@ button{font:inherit;color:inherit;cursor:pointer}
     <a class="moex-btn" href="#moex-join">Join as creator</a>
   </div>
 
-  <section id="moex-lore" aria-labelledby="moex-lore-h">
-    <h2 class="moex-sect" id="moex-lore-h">The Lore</h2>
+  <section class="moex-dropsect" id="moex-lore" aria-labelledby="moex-lore-h">
+   <details class="moex-drop">
+    <summary>
+      <h2 class="moex-sect" id="moex-lore-h">The Lore</h2>
+      <span class="moex-chev" aria-hidden="true">♥</span>
+    </summary>
     <div class="moex-box">
     <p>One lazy afternoon in heaven, Moe the cupid was busy lounging around when she accidentally knocked over the Book of Fates. Papers were everywhere! And in her panic she shoved them back in any order... Accidentally scrambling the soulmates. Whoops!</p>
     <p>Now people who were never supposed to cross paths are now inexplicably tied together. Enemies? Soulmates. Rivals? Lovers. Complete opposites? Well, let's see how that goes.</p>
@@ -245,10 +266,39 @@ button{font:inherit;color:inherit;cursor:pointer}
     <p>The open collab is for Janitor AI creators who want to play with those scrambled pairings. Make a bot with an “opposites attract” trope where the couple was never meant to work, but did. Tag it <b>#MixsedMatch</b> and swipe through the matches below.</p>
     <p><i><b>Note:</b> To be featured on the site, a bot must use the tag, include the banner in its source code, and be promoted in Velvet Hour.</i></p>
     </div>
+   </details>
   </section>
 
-  <section id="moex-join" aria-labelledby="moex-join-h">
-    <h2 class="moex-sect" id="moex-join-h">How do I join?</h2>
+  <section class="moex-dropsect" id="moex-opposites" aria-labelledby="moex-opp-h">
+   <details class="moex-drop">
+    <summary>
+      <h2 class="moex-sect" id="moex-opp-h">What does “Opposites Attract” mean?</h2>
+      <span class="moex-chev" aria-hidden="true">♥</span>
+    </summary>
+    <div class="moex-box">
+      <p>Here, <b>Opposites Attract</b> is an <b>umbrella term</b>. It doesn’t only mean “the quiet one and the loud one.” It covers any pairing where the two people are on different sides of something, and fate put them together anyway.</p>
+      <p><i>Every bot in the collab is <b>Opposites Attract</b>, so when you submit, use your “main trope” spot for the specific dynamic (like Enemies to lovers) instead.</i></p>
+      <p>Some examples of what fits under it:</p>
+      <ul>
+        <li><b>Enemies to lovers</b></li>
+        <li><b>Rivals to lovers</b></li>
+        <li><b>Fake dating</b></li>
+        <li><b>Forced proximity</b></li>
+        <li><b>Grumpy x Sunshine</b></li>
+        <li><b>Introvert x Extrovert</b></li>
+      </ul>
+      <p>Other ideas: Rich x Poor, Villain x Hero, Troublemaker x Model student, Paparazzi x Celebrity, Police x Criminal, Human x Ghost/Supernatural, Werewolf x Vampire, Player x Virgin, Popular x Nerd, Emo x Bimbo, Royalty x Civilian, Exes/ Toxic Exes, Con artist x Naive, Cynical x Optimistic, Fire x Water, Emotional x Stoic, Tomboy x Girly, Smart x Airhead, Professor x Student, and so many more!</p>
+      <p>That’s not the full list, so if your pair were never meant to work, they probably belong here.</p>
+    </div>
+   </details>
+  </section>
+
+  <section class="moex-dropsect" id="moex-join" aria-labelledby="moex-join-h">
+   <details class="moex-drop">
+    <summary>
+      <h2 class="moex-sect" id="moex-join-h">How do I join?</h2>
+      <span class="moex-chev" aria-hidden="true">♥</span>
+    </summary>
     <div class="moex-box">
     <p>No lorebook, no complicated requirements, and no need to join a server to take part! This is an <b>open collab</b>, and everyone is welcome to participate.</p>
     <p>The main theme is <b>Opposites Attract</b>.</p>
@@ -279,6 +329,7 @@ button{font:inherit;color:inherit;cursor:pointer}
     </ol>
     <a class="moex-btn" data-link="join" href="https://discord.gg/ttycJtNF3E" target="_blank" rel="noopener">Promote in Velvet Hour (18+)</a>
     </div>
+   </details>
   </section>
 
   <section class="moex-cta">
@@ -583,6 +634,12 @@ $("moex-sw-card").addEventListener("touchend",function(e){var d=e.changedTouches
   var show=m===true||(m!==false&&(!dl||isNaN(dl)||new Date()>dl));a.hidden=!show;l.hidden=!show})();
 
 renderCats();render();
+
+/* dropdowns: menu links and buttons that point at a section open its dropdown first */
+function openDrop(id){var s=id&&document.getElementById(id),d=s&&s.querySelector("details");if(d)d.open=true}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener("click",function(){openDrop(a.getAttribute("href").slice(1))})});
+window.addEventListener("hashchange",function(){openDrop(location.hash.slice(1))});
+openDrop(location.hash.slice(1));
 
 (function(){
   var src=document.getElementById("moex-snippet"),out=document.getElementById("moex-code-out"),btn=document.getElementById("moex-copy");
